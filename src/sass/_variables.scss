@@ -10,10 +10,12 @@ $borderColor: rgba(84, 95, 125, 0.2);
 // BREAKPOINTS
 /*
  phone 600px
- tablet  768px
+ tablet portraint  768px
+ tablet landscape 1200px
  desktop 1366px
  */
 
 $phone: "37.5em";
-$tablet: "48em";
+$tablet-port: "48em";
+$tablet-land: "75em";
 $desktop: "85.4em";

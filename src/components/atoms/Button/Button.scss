@@ -1,0 +1,8 @@
+.app__button {
+  @include btn;
+  font-size: 1.4rem;
+  padding: 2rem 1.5rem;
+  font-family: "Avenir-Bold";
+  text-transform: uppercase;
+  background-color: $turquoiseColor;
+}

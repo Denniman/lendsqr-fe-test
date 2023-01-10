@@ -1,6 +1,10 @@
 @import "./sass/variables";
 @import "./sass/reset";
 @import "./sass/fonts";
+@import "./sass/mixin";
+@import "./pages/login/Login.scss";
+@import "./components/atoms/Input/Input.scss";
+@import "./components/atoms/Button/Button.scss";
 
 body {
   background-color: #fbfbfb;
