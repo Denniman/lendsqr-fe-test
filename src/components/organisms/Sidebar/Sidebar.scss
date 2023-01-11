@@ -1,0 +1,90 @@
+.aside__wrapper {
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  min-height: 100vh;
+  padding-top: 3rem;
+  font-family: "Work Sans";
+  background-color: $white;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+
+  @media (min-width: $tablet-land) {
+    width: 28.3rem;
+    padding-top: 0;
+  }
+}
+
+.nav {
+  &__container {
+    margin-top: 3rem;
+  }
+
+  &__title {
+    display: none;
+    @media (min-width: $tablet-land) {
+      display: block;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__heading {
+    display: none;
+
+    @media (min-width: $tablet-land) {
+      display: block;
+      padding: 0 2rem;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: $blueBayouxColor;
+      text-transform: uppercase;
+    }
+  }
+
+  &__item {
+    gap: 1.5rem;
+    display: flex;
+    cursor: pointer;
+    color: $nepalColor;
+    align-items: center;
+    position: relative;
+    padding: 1.4rem 2rem;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 0.7rem;
+    }
+
+    &:hover {
+      color: $bayofManyColor;
+      background-color: rgba(57, 205, 204, 0.5);
+    }
+
+    &.active {
+      color: $bayofManyColor;
+      background-color: $polarColor;
+      &::after {
+        left: 0;
+        content: "";
+        width: 4px;
+        height: 100%;
+        position: absolute;
+        background-color: $turquoiseColor;
+      }
+    }
+  }
+}
+
+.close__wrapper {
+  display: flex;
+  padding: 0 2rem;
+  justify-content: flex-end;
+}
+
+.icon--downLine,
+.close--icon {
+  transform: scale(2.5);
+}
+
+.mt-12 {
+  margin-top: 12rem;
+}
