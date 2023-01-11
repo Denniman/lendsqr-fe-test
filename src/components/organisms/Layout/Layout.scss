@@ -1,0 +1,65 @@
+.layout {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 10rem 1fr;
+
+    grid-template-areas:
+      "header header"
+      "main  main"
+      "main  main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+
+    @media (min-width: $tablet-port) {
+      grid-template-areas:
+        "header header"
+        "aside  main"
+        "aside  main";
+      grid-template-columns: 10rem 1fr;
+    }
+
+    @media (min-width: $tablet-land) {
+      grid-template-rows: 6rem 1fr;
+      grid-template-columns: 28rem 1fr;
+    }
+  }
+
+  &__main {
+    grid-area: main;
+    font-size: 5rem;
+    @media (min-width: $tablet-port) {
+      padding: 20px;
+    }
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.hide {
+  transform: translateX(-100%);
+  transition: ease-in-out 0.5s;
+}
+
+.show {
+  z-index: 999;
+  transform: translateX(-1%);
+  transition: ease-in-out 0.5s;
+}
+
+.sidebar {
+  grid-area: aside;
+
+  @media (max-width: $phone) {
+    left: 0;
+    width: 50%;
+    z-index: 3;
+  }
+
+  @media (min-width: $tablet-port) {
+    position: static;
+    transform: translateX(0%);
+  }
+}
