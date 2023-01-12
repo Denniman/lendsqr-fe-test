@@ -4,10 +4,15 @@
 @import "./sass/mixin";
 @import "./pages/login/Login.scss";
 @import "./components/atoms/Input/Input.scss";
+@import "./pages/dashboard/Dashboard.scss";
 @import "./components/atoms/Button/Button.scss";
 @import "./components/molecules/Header/Header.scss";
+@import "./components/atoms/Select/Select.scss";
 @import "./components/organisms/Layout/Layout.scss";
 @import "./components/organisms/Sidebar/Sidebar.scss";
+@import "./components/molecules/Skeleton/Skeleton.scss";
+@import "./components/molecules/DataTable/DataTable.scss";
+@import "./components/molecules/MetricsCard/MetricsCard.scss";
 @import "./components/molecules/SearchInput/SearchInput.scss";
 
 body {

@@ -1,0 +1,53 @@
+/**
+ * extending app global constants
+ * @constant APP_URL_LIST default value
+ */
+export enum APP_URL_LIST {
+  HOME_URL = "/",
+  LOAN = "/loans",
+  KARMA = "/Karma",
+  NOT_FOUND_URL = "*",
+  REPORT = "./report",
+  USERS_URL = "/users",
+  SAVINGS = "/savings",
+  SIGNIN_URL = "/signin",
+  SERVICES = "./Services",
+  WHITELIST = "/Whitelist",
+  AUDIT_LOGS = "./auditLogs",
+  GUARANTORS = "/guarantors",
+  PREFERENCES = "./Preferences",
+  SETTLEMENTS = "./settlements",
+  FEES_CHARGES = "/fees-Charges",
+  DASH_BOARD_URL = "/dashboard",
+  ORGANIZATION = "./organization",
+  LOAN_PRODUCTS = "./loan-products",
+  TRANSACTIONS = "./transactions",
+  LOAN_REQUESTS = "/loan-requests",
+  DECISION_MODELS = "/decision-models",
+  USERDETAILS_URL = "/user-details",
+  SERVICE_ACCOUNT = "./savince-Account",
+  SAVINGS_PRODUCT = "/savings-Product",
+}
+
+export const PRIVATE_ROUTES = [
+  APP_URL_LIST.AUDIT_LOGS,
+  APP_URL_LIST.LOAN_PRODUCTS,
+  APP_URL_LIST.ORGANIZATION,
+  APP_URL_LIST.WHITELIST,
+  APP_URL_LIST.SETTLEMENTS,
+  APP_URL_LIST.DECISION_MODELS,
+  APP_URL_LIST.GUARANTORS,
+  APP_URL_LIST.FEES_CHARGES,
+  APP_URL_LIST.KARMA,
+  APP_URL_LIST.LOAN,
+  APP_URL_LIST.PREFERENCES,
+  APP_URL_LIST.REPORT,
+  APP_URL_LIST.TRANSACTIONS,
+  APP_URL_LIST.SAVINGS,
+  APP_URL_LIST.SERVICE_ACCOUNT,
+  APP_URL_LIST.HOME_URL,
+  APP_URL_LIST.USERS_URL,
+  APP_URL_LIST.SIGNIN_URL,
+  APP_URL_LIST.NOT_FOUND_URL,
+  APP_URL_LIST.USERDETAILS_URL,
+];

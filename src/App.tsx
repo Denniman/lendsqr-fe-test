@@ -1,11 +1,8 @@
 import React from "react";
+import { RootRoutes } from "./routes";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>App Started!!</h1>
-    </div>
-  );
+  return <RootRoutes />;
 }
 
 export default App;
