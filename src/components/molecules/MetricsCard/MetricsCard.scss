@@ -1,0 +1,49 @@
+.card {
+  gap: 1.5rem;
+  display: flex;
+  height: 16rem;
+  max-width: auto;
+  padding: 2.5rem;
+  font-weight: 600;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.icon__wrapper {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+
+  &.active-users {
+    background-color: #eee8ff;
+  }
+
+  &.loan-users {
+    background-color: #feefec;
+  }
+
+  &.savings-users {
+    background-color: #ffebf0;
+  }
+  &.users-bg {
+    background-color: #fce8ff;
+  }
+}
+.metrics--title {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: $blueBayouxColor;
+  text-transform: uppercase;
+}
+
+.metrics--stat {
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: $bayofManyColor;
+}
