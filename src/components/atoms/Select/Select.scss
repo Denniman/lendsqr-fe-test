@@ -1,0 +1,16 @@
+.select {
+  &__wrapper {
+    gap: 4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    padding: 0.4rem 1.3rem;
+    color: $blueBayouxColor;
+    background-color: #e5e8ee;
+  }
+}

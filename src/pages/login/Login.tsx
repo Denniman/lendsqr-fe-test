@@ -12,8 +12,8 @@ export const Login = () => {
         <Icon name="logo" />
       </div>
       <div className="login__wrapper">
-        <div className="image--rapper">
-          <img src={loginImg} alt="pablo-sign" className="login__img" />
+        <div className="image--wrapper">
+          <img src={loginImg} alt="" className="login__img" />
         </div>
 
         <form className="login__form" onSubmit={handleFormSubmit}>

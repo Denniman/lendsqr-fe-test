@@ -1,7 +1,7 @@
 import { IconType } from "@app/components/atoms";
 
 type Route = {
-  path?: string;
+  path: string;
   title: string;
   icon: keyof Pick<
     IconType,

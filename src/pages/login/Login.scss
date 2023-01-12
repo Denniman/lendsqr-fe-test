@@ -69,10 +69,10 @@
   margin-top: 3rem;
 }
 
-.image--rapper {
+.image--wrapper {
   display: none;
   @media (min-width: $tablet-land) {
-    // padding-left: 4rem;
+    padding: 0 2%;
     display: block;
   }
 }

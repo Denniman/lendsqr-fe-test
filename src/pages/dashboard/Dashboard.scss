@@ -1,0 +1,128 @@
+.dashboard {
+  margin-top: 3rem;
+  padding: 2rem 3rem;
+  @media (min-width: $tablet-port) {
+    padding: 2rem 0;
+  }
+}
+
+.page-title {
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: $bayofManyColor;
+}
+
+.metrics__wrapper {
+  gap: 2rem;
+  display: grid;
+  margin-top: 4rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-port) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.table__wrapper {
+  margin-top: 4rem;
+  border-radius: 4px;
+  padding: 1.5rem 1rem;
+  background-color: $white;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.table {
+  &__header {
+    display: grid;
+    padding: 0 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (min-width: $tablet-land) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    &--item {
+      gap: 2rem;
+      display: flex;
+      align-items: center;
+
+      &.show {
+        @media (max-width: $tablet-land) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: $blueBayouxColor;
+    text-transform: uppercase;
+  }
+}
+
+.filter--icon {
+  color: $blueBayouxColor;
+  transform: scale(2);
+}
+
+.error {
+  display: flex;
+  margin-top: 5rem;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  color: $redRibbonColor;
+}
+
+.table__footer {
+  display: flex;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  color: $blueBayouxColor;
+  justify-content: space-between;
+
+  &--left {
+    gap: 1.5rem;
+    @extend %flex;
+  }
+
+  &--dropdownText {
+    gap: 1rem;
+    @extend %flex;
+  }
+
+  &--pagination {
+    gap: 2rem;
+    @extend %flex;
+  }
+}
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+.pagination--btn {
+  display: flex;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 0.4rem 1.3rem;
+  background-color: #e5e8ee;
+}
+
+.pageBtn {
+  cursor: pointer;
+}
+
+.filter__dropdown {
+  left: 0;
+  top: 1.5rem;
+  position: absolute;
+}

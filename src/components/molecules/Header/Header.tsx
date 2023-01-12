@@ -1,8 +1,9 @@
-import { Icon } from "@app/components/atoms";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 
+import { Icon } from "@app/components/atoms";
+import logo from "@app/assets/images/logo.png";
 import { SearchInput } from "../SearchInput";
 
 import { IHeader } from "./Header.interface";
@@ -16,7 +17,7 @@ export const Header: React.FC<IHeader> = ({ className, closeSideBar }) => {
     <header className={`header__wrapper ${className}`}>
       <div className="header__left">
         <div className="logo__wrapper">
-          <Icon name="logoSmall" />
+          <img src={logo} alt="logo" />
         </div>
         <div className="search__container">
           <SearchInput />

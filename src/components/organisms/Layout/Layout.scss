@@ -27,7 +27,6 @@
 
   &__main {
     grid-area: main;
-    font-size: 5rem;
     @media (min-width: $tablet-port) {
       padding: 20px;
     }

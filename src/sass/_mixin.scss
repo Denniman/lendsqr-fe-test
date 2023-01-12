@@ -6,3 +6,25 @@
   cursor: pointer;
   border-radius: 8px;
 }
+
+@mixin page-title {
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: $bayofManyColor;
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == tablet-port) {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+}
