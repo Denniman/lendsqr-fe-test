@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import moment from "moment";
+
 import { Icon } from "@app/components/atoms";
 import { IData } from "./DataTable.interface";
 
@@ -32,8 +33,17 @@ export const DataTable: React.FC<IData> = ({
         {moment(createdAt).format("MMM Do, YYYY h:mmA")}
       </p>
 
-      <div className="data__item--entry data--end">
+      <div className="data__item--entry data--end show">
         <div className="status active show">Active</div>
+      </div>
+      <div
+        ref={testRef}
+        onClick={() => setShow(!show)}
+        className="verticalRounded__wrapper"
+      >
+        <span className="verticalRounded"></span>
+        <span className="verticalRounded"></span>
+        <span className="verticalRounded"></span>
         <div className="tooltip">
           <div className={`tooltip__modal ${show ? "active" : "notactive"}`}>
             <div
@@ -53,15 +63,6 @@ export const DataTable: React.FC<IData> = ({
               <Icon name="activeUser" />
               Activate User
             </div>
-          </div>
-          <div
-            ref={testRef}
-            onClick={() => setShow(!show)}
-            className="verticalRounded__wrapper"
-          >
-            <span className="verticalRounded"></span>
-            <span className="verticalRounded"></span>
-            <span className="verticalRounded"></span>
           </div>
         </div>
       </div>

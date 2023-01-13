@@ -4,15 +4,13 @@ import { IUser } from "@app/models";
 export const useFetch = (url: string) => {
   const [error, setError] = useState(null);
   const [data, setData] = useState<IUser[]>();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
       try {
         const res = await fetch(url);
-        if (res.status !== 200) {
-          throw new Error("Something went wrong. Try again");
-        }
         const data = await res.json();
         setData(data);
         setIsLoading(false);
