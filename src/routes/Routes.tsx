@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { APP_URL_LIST } from "./urls";
-import { Login, Dashboard, Users } from "@app/pages";
+import { Login, Dashboard, Users, UserDetails } from "@app/pages";
 import { Layout } from "@app/components/organisms";
 
 export const RootRoutes = () => {
@@ -19,6 +19,22 @@ export const RootRoutes = () => {
         />
         <Route
           path={APP_URL_LIST.USERS_URL}
+          element={
+            <Layout>
+              <Users />
+            </Layout>
+          }
+        />
+        <Route
+          path={APP_URL_LIST.USERDETAILS_URL}
+          element={
+            <Layout>
+              <UserDetails />
+            </Layout>
+          }
+        />
+        <Route
+          path={APP_URL_LIST.NOT_FOUND_URL}
           element={
             <Layout>
               <Users />

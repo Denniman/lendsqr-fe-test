@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { RiFilter3Line } from "react-icons/ri";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
@@ -17,12 +18,13 @@ const BASE_URL =
   "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users";
 
 export const Users = () => {
+  const { getUserId } = useContext(UsersContext);
   const [usersPerPage] = useState(10);
   const { data, isLoading, error } = useFetch(BASE_URL);
   const [currentPage, setCurrentPage] = useState(1);
   const [showFilterDropdown, setShowFilterDropdown] = useState(false);
 
-  const { getUserId } = useContext(UsersContext);
+  const navigate = useNavigate();
 
   const lastUserIndex = currentPage * usersPerPage;
   const firstUsersIndex = lastUserIndex - usersPerPage;
@@ -108,7 +110,14 @@ export const Users = () => {
 
         {isLoading && <Skeleton length={6} />}
         {currentUsers?.map((users) => (
-          <DataTable key={users.id} {...users} onViewDetails={getUserId} />
+          <DataTable
+            key={users.id}
+            {...users}
+            onViewDetails={() => {
+              getUserId(users.id);
+              navigate("/user-details", { replace: true });
+            }}
+          />
         ))}
       </div>
       <div className="table__footer">

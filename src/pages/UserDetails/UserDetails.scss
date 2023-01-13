@@ -1,0 +1,268 @@
+.userDetails {
+  &__wrapper {
+    margin-top: 6rem;
+    font-size: 1.6rem;
+  }
+
+  &__header {
+    gap: 2rem;
+    display: flex;
+    margin-top: 3.2rem;
+    align-items: center;
+    color: $bayofManyColor;
+    flex-direction: column;
+    justify-content: center;
+    @media (min-width: $tablet-port) {
+      gap: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+%text-light {
+  font-size: 1.4rem;
+  color: $blueBayouxColor;
+}
+%text-dark {
+  font-weight: 500;
+  color: $bayofManyColor;
+}
+
+%btn {
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 1.4rem 4rem;
+  font-family: "Work Sans";
+  background-color: $white;
+}
+
+.btn--red {
+  @extend %btn;
+  color: $redRibbonColor;
+  border: 1px solid $redRibbonColor;
+}
+
+.btn--turquoise {
+  @extend %btn;
+  color: $turquoiseColor;
+  border: 1px solid $turquoiseColor;
+}
+.return {
+  gap: 2rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: $blueBayouxColor;
+}
+
+.red {
+  color: $redRibbonColor;
+  border: 1px solid $redRibbonColor;
+}
+
+.skyBlue {
+  color: $turquoiseColor;
+  border: 1px solid $turquoiseColor;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.main--header {
+  overflow-x: auto;
+}
+.main--header,
+.personaldetails {
+  margin-top: 3rem;
+  border-radius: 4px;
+  background-color: $white;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.user {
+  gap: 2rem;
+  display: flex;
+  padding: 1.5rem;
+
+  &--name {
+    font-size: 2rem;
+    @extend %text-dark;
+  }
+
+  &--id {
+    @extend %text-light;
+  }
+
+  &--timer {
+    font-weight: 500;
+    @extend %text-light;
+  }
+  &--amount {
+    font-size: 2rem;
+    @extend %text-dark;
+  }
+}
+
+.names_wrapper {
+  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image_wrapper {
+  display: flex;
+}
+.userimg {
+  display: block;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.user--divider {
+  width: 1px;
+  height: 10rem;
+  background-color: $borderColor;
+}
+
+.start--wrapper {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagetabs {
+  gap: 1.5rem;
+  display: flex;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: $tablet-port) {
+    gap: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &--heading {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+  }
+}
+
+.pagetabs--heading {
+  &.active {
+    color: $turquoiseColor;
+    position: relative;
+    &::after {
+      left: 0;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background-color: $turquoiseColor;
+    }
+  }
+
+  &.inactive {
+    font-family: "CompactText";
+  }
+}
+
+.personaldetails {
+  padding: 1.5rem;
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $bayofManyColor;
+  }
+
+  &--section {
+    padding: 1.3rem 0;
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  }
+}
+
+.information {
+  margin-top: 2rem;
+}
+
+.loading__wrapper {
+  display: flex;
+  font-size: 3.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading--secondary,
+.heading--tertiary {
+  overflow: hidden;
+  white-space: nowrap;
+  color: $blueBayouxColor;
+  text-overflow: ellipsis;
+}
+
+.heading--secondary {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.heading--tertiary {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.hide-items {
+  display: none;
+  @media (min-width: $tablet-land) {
+    display: inline-block;
+  }
+}
+
+.mt-2 {
+  margin-top: 1.4rem;
+}
+
+.grid-col-5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (min-width: $tablet-land) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.grid-col-4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (min-width: $tablet-land) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (min-width: $tablet-land) {
+    grid-template-columns: repeat(3, 26.4rem);
+  }
+}
+
+.grid-income {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (min-width: $tablet-land) {
+    grid-template-columns: repeat(3, 33rem);
+  }
+}
+
+.error-message {
+  color: $redRibbonColor;
+}
