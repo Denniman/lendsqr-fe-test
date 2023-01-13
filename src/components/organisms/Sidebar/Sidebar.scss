@@ -20,23 +20,29 @@
   }
 
   &__title {
-    display: none;
-    @media (min-width: $tablet-land) {
+    display: block;
+    font-size: 1.6rem;
+    @media (min-width: $tablet-port) {
+      display: none;
+    }
+    @media (min-width: $desktop) {
       display: block;
-      font-size: 1.6rem;
     }
   }
 
   &__heading {
-    display: none;
+    display: block;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: $blueBayouxColor;
+    text-transform: uppercase;
 
-    @media (min-width: $tablet-land) {
+    @media (min-width: $tablet-port) {
+      display: none;
+    }
+    @media (min-width: $desktop) {
       display: block;
-      padding: 0 2rem;
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: $blueBayouxColor;
-      text-transform: uppercase;
     }
   }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineArrowDropDown } from "react-icons/md";
+import { MdOutlineArrowDropDown, MdOutlineClose } from "react-icons/md";
 
 import { Icon } from "@app/components/atoms";
 import logo from "@app/assets/images/logo.png";
@@ -12,7 +12,11 @@ const image_url = `https://randomuser.me/api/portraits/med/men/${Math.floor(
   Math.random() * 50
 )}.jpg`;
 
-export const Header: React.FC<IHeader> = ({ className, closeSideBar }) => {
+export const Header: React.FC<IHeader> = ({
+  className,
+  isDrawerOpen,
+  closeSideBar,
+}) => {
   return (
     <header className={`header__wrapper ${className}`}>
       <div className="header__left">
@@ -22,7 +26,11 @@ export const Header: React.FC<IHeader> = ({ className, closeSideBar }) => {
         <div className="search__container">
           <SearchInput />
         </div>
-        <GiHamburgerMenu className="hamburgerMenu" onClick={closeSideBar} />
+        {isDrawerOpen ? (
+          <MdOutlineClose className="close--icon" onClick={closeSideBar} />
+        ) : (
+          <GiHamburgerMenu className="hamburgerMenu" onClick={closeSideBar} />
+        )}
       </div>
       <div className="header__right">
         <p className="doc-text">Docs</p>

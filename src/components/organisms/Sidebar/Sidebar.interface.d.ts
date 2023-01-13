@@ -31,5 +31,4 @@ type Route = {
 export type ISidebar = {
   routes?: Route[];
   className?: string;
-  closeSideBar?: VoidFunction;
 } & React.HTMLAttributes<HTMLDivElement>;

@@ -1,26 +1,18 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-
-import { MdOutlineClose } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
+
 import { Icon } from "@app/components/atoms";
 
 import { APP_URL_LIST } from "@app/routes/urls";
 
 import { ISidebar } from "./Sidebar.interface";
 
-export const Sidebar: React.FC<ISidebar> = ({
-  routes,
-  className,
-  closeSideBar,
-}) => {
+export const Sidebar: React.FC<ISidebar> = ({ routes, className }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   return (
     <aside className={`aside__wrapper ${className}`}>
-      <div className="close__wrapper">
-        <MdOutlineClose className="close--icon" onClick={closeSideBar} />
-      </div>
       <div className="nav__item mt-12">
         <Icon name="briefcase" />
         <p className="nav__title">Switch Organization</p>
