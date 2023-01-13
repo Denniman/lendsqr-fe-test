@@ -9,6 +9,7 @@ export const RootRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path={APP_URL_LIST.SIGNIN_URL} element={<Login />} />
+
         <Route
           path={APP_URL_LIST.DASH_BOARD_URL}
           element={
@@ -33,6 +34,9 @@ export const RootRoutes = () => {
             </Layout>
           }
         />
+
+        <Route path={APP_URL_LIST.HOME_URL} element={<Login />} />
+
         <Route
           path={APP_URL_LIST.NOT_FOUND_URL}
           element={
@@ -42,7 +46,6 @@ export const RootRoutes = () => {
           }
         />
       </Routes>
-      <Routes></Routes>
     </BrowserRouter>
   );
 };

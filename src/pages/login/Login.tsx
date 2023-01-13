@@ -1,10 +1,14 @@
 import React, { FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Icon, Input } from "@app/components/atoms";
 import loginImg from "../../assets/images/pablo-sign-in 1.svg";
 
 export const Login = () => {
+  const navigation = useNavigate();
+
   const handleFormSubmit = (e: FormEvent) => {
     e.preventDefault();
+    navigation("./users");
   };
   return (
     <section className="login">
