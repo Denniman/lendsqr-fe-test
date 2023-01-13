@@ -44,7 +44,9 @@
     &--item {
       gap: 2rem;
       display: flex;
+      cursor: pointer;
       align-items: center;
+      position: relative;
 
       &.show {
         @media (max-width: $tablet-land) {
@@ -72,8 +74,13 @@
   margin-top: 5rem;
   font-size: 1.8rem;
   align-items: center;
+  padding: 1.4rem 2rem;
   justify-content: center;
-  color: $redRibbonColor;
+  background-color: rgba(228, 3, 59, 0.1);
+
+  &--text {
+    color: $redRibbonColor;
+  }
 }
 
 .table__footer {
@@ -83,10 +90,17 @@
   align-items: center;
   color: $blueBayouxColor;
   justify-content: space-between;
+  @media (max-width: $phone) {
+    justify-content: center;
+  }
 
   &--left {
-    gap: 1.5rem;
-    @extend %flex;
+    display: none;
+    @media (min-width: $tablet-port) {
+      gap: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &--dropdownText {
