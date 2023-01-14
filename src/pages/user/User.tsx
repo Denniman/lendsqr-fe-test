@@ -17,7 +17,7 @@ import {
 const BASE_URL =
   "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users";
 
-export const Users = () => {
+export const User = () => {
   const { getUserId } = useContext(UsersContext);
   const [usersPerPage] = useState(10);
   const { data, isLoading, error } = useFetch(BASE_URL);

@@ -93,7 +93,7 @@ Sidebar.defaultProps = {
     {
       icon: "userFriend",
       title: "Users",
-      path: APP_URL_LIST.USERS_URL,
+      path: APP_URL_LIST.USER_URL,
     },
     {
       icon: "group",
