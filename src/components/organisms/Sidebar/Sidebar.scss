@@ -25,7 +25,7 @@
     @media (min-width: $tablet-port) {
       display: none;
     }
-    @media (min-width: $desktop) {
+    @media (min-width: $tablet-land) {
       display: block;
     }
   }
@@ -41,7 +41,7 @@
     @media (min-width: $tablet-port) {
       display: none;
     }
-    @media (min-width: $desktop) {
+    @media (min-width: $tablet-land) {
       display: block;
     }
   }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { Header } from "@app/components/molecules";
+import { Header } from "../Header";
 import { Sidebar } from "../Sidebar";
 
 import { LayoutProps } from "./Layout.interface";
@@ -15,7 +15,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [pathname]);
   return (
     <div className="layout__wrapper">
-      <Sidebar className={`${isDrawerOpen ? "show" : "hide"} sidebar`} />
+      <Sidebar className={`sidebar ${isDrawerOpen ? "show" : "hide"}`} />
       <Header
         className="header"
         isDrawerOpen={isDrawerOpen}
