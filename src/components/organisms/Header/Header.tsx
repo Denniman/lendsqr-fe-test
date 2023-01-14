@@ -4,7 +4,7 @@ import { MdOutlineArrowDropDown, MdOutlineClose } from "react-icons/md";
 
 import { Icon } from "@app/components/atoms";
 import logo from "@app/assets/images/logo.png";
-import { SearchInput } from "../SearchInput";
+import { SearchInput } from "../../molecules/SearchInput";
 
 import { IHeader } from "./Header.interface";
 

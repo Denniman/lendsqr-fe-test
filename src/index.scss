@@ -6,9 +6,9 @@
 @import "./components/atoms/Input/Input.scss";
 @import "./pages/dashboard/Dashboard.scss";
 @import "./components/atoms/Button/Button.scss";
-@import "./components/molecules/Header/Header.scss";
 @import "./components/atoms/Select/Select.scss";
 @import "./pages/UserDetails/UserDetails.scss";
+@import "./components/organisms/Header/Header.scss";
 @import "./components/molecules/Filter/Filter.scss";
 @import "./components/organisms/Layout/Layout.scss";
 @import "./components/atoms/CustomSelect/CustomSelect.scss";
@@ -18,8 +18,3 @@
 @import "./components/molecules/DataTable/DataTable.scss";
 @import "./components/molecules/MetricsCard/MetricsCard.scss";
 @import "./components/molecules/SearchInput/SearchInput.scss";
-
-body {
-  background-color: #fbfbfb;
-  font-family: "Work Sans", sans-serif;
-}
