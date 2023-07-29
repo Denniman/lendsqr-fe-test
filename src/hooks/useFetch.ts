@@ -4,23 +4,21 @@ import { IUser } from "@app/models";
 export const useFetch = (url: string) => {
   const [error, setError] = useState(null);
   const [data, setData] = useState<IUser[]>();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
+    (async () => {
       try {
         const res = await fetch(url);
         const data = await res.json();
         setData(data);
-        setIsLoading(false);
       } catch (err: any) {
         setError(err.message);
+      } finally {
         setIsLoading(false);
       }
-    };
+    })();
 
-    fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
